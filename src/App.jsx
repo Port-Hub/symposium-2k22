@@ -9,8 +9,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route exact path="/" element={<ParaX />} />
-        <Route element={<Layout><Outlet /></Layout>} >
-          <Route exact path="/events" element={<Events />} />
+        <Route element={<Layout> <Outlet /> </Layout>} >
+          <Route path="/events" element={<Events />}></Route>
         </Route>
       </Routes>
     </Router>

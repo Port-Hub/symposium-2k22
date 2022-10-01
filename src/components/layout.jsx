@@ -1,8 +1,11 @@
 import Flakes from "./flakes"
 
-const Layout = () => {
+const Layout = (props) => {
     return(
-        <Flakes />
+        <div>
+            <Flakes />
+            {props.children}
+        </div>
     )
 }
 

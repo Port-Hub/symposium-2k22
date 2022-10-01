@@ -44,7 +44,7 @@ const Flakes = () => {
         },
         particles: {
           color: {
-            value: "#fff",
+            value: "#000",
           },
           collisions: {
             enable: true,
