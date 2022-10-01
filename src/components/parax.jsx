@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
+import { Parallax, ParallaxLayer} from '@react-spring/parallax';
+import { config } from 'react-spring'
 import Sky from "../assets/parallax/Proper/PNG/1sky.png";
 import Cloud from "../assets/parallax/Proper/SVG/2cloud.svg";
 import Sea from "../assets/parallax/Proper/PNG/3sea.png";
 import MainIsl from "../assets/parallax/Proper/SVG/4 Main Island.svg";
 import Ship from "../assets/parallax/Proper/SVG/5ship.svg";
 import Rocks from "../assets/parallax/Proper/SVG/6rocks.svg";
-import Island from "../assets/parallax/Proper/SVG/7Island.svg";
-
 // // Little helpers ...
 // const url = (name, wrap) =>
 //   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -16,7 +16,7 @@ const ParaX = () => {
   const parallax = useRef();
   return (
     <div  className="w-screen h-screen" >
-      <Parallax ref={parallax} pages={6.5}>
+      <Parallax ref={parallax} pages={6.5} config={config.stiff}>
         <ParallaxLayer offset={0} speed={1} sticky={{start:0,end:7}} onClick={() => parallax.current.scrollTo(1)}>
           <img src={Sky} className="w-screen h-screen"/>
            </ParallaxLayer>
