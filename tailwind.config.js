@@ -3,5 +3,22 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        myBlue: {
+          "primary": "#06283D",
+          "secondary": "#256D85",
+          "accent": "#47B5FF",
+          "neutral": "#2C3035",
+          "base-100": "#DFF6FF",
+          "info": "#13C1F1",
+          "success": "#34DA7C",
+          "warning": "#C19615",
+          "error": "#EF7696",
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui')],
 }
