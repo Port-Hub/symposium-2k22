@@ -4,7 +4,7 @@ import ParaX from "./components/parax";
 const App = () => {
   return (
     <>
-    <ParaX />
+    <ParaX/>
     </>
   );
 };
