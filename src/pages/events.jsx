@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from 'react-use-gesture'
 
-import styles from './styles.module.css'
+import styles from '../styles.module.css'
 import Golf from '../assets/events/code-golfing.png';
 import Wheel from '../assets/events/hack-wheel.png';
 import Bugs from '../assets/events/hugs-bugs.png';
@@ -58,12 +58,10 @@ function Deck() {
         api.start(i => to(i))
       }, 600)
   })
-  // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
-  return (
+ return (
     <>
       {props.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
           <animated.div
             {...bind(i)}
             style={{
@@ -79,8 +77,11 @@ function Deck() {
 
 export default function Events() {
   return (
-    <div className={styles.container}>
-      <Deck />
-    </div>
+    <>
+      <div className={styles.container}>
+      <h1 className='text-5xl pl-10 pr-10'>Events</h1>
+        <Deck />
+      </div>
+    </>
   )
 }

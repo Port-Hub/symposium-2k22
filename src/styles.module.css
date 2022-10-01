@@ -4,7 +4,6 @@
       auto;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   .deck {
     width: 300px;
