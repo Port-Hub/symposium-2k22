@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from 'react-use-gesture'
-
-import styles from '../styles.module.css'
+import Drawer from "../components/drawer.jsx"
 import Golf from '../assets/events/code-golfing.png';
 import Wheel from '../assets/events/hack-wheel.png';
 import Bugs from '../assets/events/hugs-bugs.png';
@@ -61,13 +60,14 @@ function Deck() {
  return (
     <>
       {props.map(({ x, y, rot, scale }, i) => (
-        <animated.div className={styles.deck} key={i} style={{ x, y }}>
+        <animated.div className="bg-auto w-80 h-52 will-change-transform justify-center" key={i} style={{ x, y }}>
           <animated.div
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i]})`,
             }}
+            className="bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary"
           />
         </animated.div>
       ))}
@@ -75,13 +75,20 @@ function Deck() {
   )
 }
 
-export default function Events() {
+const Contained = () => {
   return (
-    <>
-      <div className={styles.container}>
-      <h1 className='text-5xl pl-10 pr-10'>Events</h1>
+    <div className='container mx-auto'>
+      <div className="flex flex-wrap flex-row pt-20">
         <Deck />
       </div>
-    </>
+    </div>
   )
 }
+
+const Events = () => {
+  return(
+    <Drawer content={<Contained />} />
+  )
+}
+
+export default Events;
