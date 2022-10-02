@@ -86,7 +86,7 @@ const Landing = () => {
         <ParallaxLayer offset={2} speed={1} sticky={{ start: 6, end: 8 }} onClick={() => parallax.current.scrollTo(8)}>
           <img
             src={xplore}
-            className="  m-auto w-5/6 hover:translate-y-12 transition-all delay-200 duration-100 hover:opacity-0 "
+            className="  m-auto w-5/6 hover:translate-y-12 transition-all delay-200 duration-100"
           />
         </ParallaxLayer>
 
