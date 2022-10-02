@@ -12,33 +12,67 @@ import Scroll from '../assets/events/scroll-unveilling.png';
 import Brainz from '../assets/events/select-from-brainz.png';
 import Coat from '../assets/events/turn-coat.png';
 import Whack from '../assets/events/whack-a-bug.png';
+import Guvi from "../assets/sponsors/guvi-logo.png";
+import Learners from "../assets/sponsors/learners-cortex.jpg";
+import Magoosh from "../assets/sponsors/magoosh-logo.png";
 
 
-const cards = [Golf, Wheel, Bugs, Santa, Scroll, Brainz, Coat, Whack];
+const cards = 
+[
+  {
+    "image":Golf,
+    "link":"golfing"
+  }, 
+  {
+    "image": Wheel,
+    "link":"wheel"
+  },
+  {
+    "image":Bugs,
+    "link":"bugs"
+  },
+  {
+    "image":Santa,
+    "link":"hunt"
+  },
+  {
+    "image":Scroll,
+    "link":"scroll"
+  },
+  {
+    "image":Brainz,
+    "link":"brainz"
+  },
+  {
+    "image":Coat,
+    "link":"turncoat"
+  },
+  {
+    "image":Whack,
+    "link":"whackbug"
+  }
+];
 
-const Deck = () => {
- return (
-    <>
-      {cards.map(( item,index ) => (
-        <animated.div className="bg-auto will-change-transform" key={index}>
-          <animated.div
-            style={{
-              backgroundImage: `url(${item})`,
-            }}
-            className={ `bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:rotate-90 `}
-          />
-          <Link className='btn btn-primary'>Know More</Link>
-        </animated.div>
-      ))}
-    </>
-  )
-}
+const sponsor = 
+[
+  {
+    "image": Guvi,
+    "link": "https://www.guvi.in/"
+  },
+  {
+    "image": Learners,
+    "link": "https://learnerscortex.com/"
+  },
+  {
+    "image": Magoosh,
+    "link": "https://magoosh.com/"
+  }
+]
 
-const Contained = () => {
+const About = () => {
   return (
-    <>
-      <div className="grid grid-cols-2 place-items-center">
-        <div className='w-40 h-40'>
+    <div className="grid grid-cols-2 place-items-center">
+      <div className='w-40 h-40'>
           <img src={Favicon} />
           <img src={Logo} />
         </div>
@@ -54,8 +88,59 @@ const Contained = () => {
           </ul>
         </div>
       </div>
+  )
+}
+
+const Deck = () => {
+ return (
+    <>
+      {cards.map(( item,index ) => (
+        <animated.div className="bg-auto will-change-transform" key={index}>
+          <animated.div
+            style={{
+              backgroundImage: `url(${item.image})`,
+            }}
+            className={ `bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary `}
+          />
+          <Link to={item.link} className='btn btn-primary'>Know More</Link>
+        </animated.div>
+      ))}
+    </>
+  )
+}
+
+const Sponsors = () => {
+  return (
+     <>
+       {sponsor.map(( item,index ) => (
+         <animated.div className="will-change-transform" key={index}>
+           <animated.div
+             style={{
+               backgroundImage: `url(${item.image})`,
+             }}
+             className={ `w-72 h-40 rounded-2xl will-change-transform shadow-lg shadow-primary `}
+           />
+         </animated.div>
+       ))}
+     </>
+   )
+ }
+
+const Contained = () => {
+  return (
+    <>
+      <About />
+      <h2 className='text-5xl mt-20 text-center'>
+        Events
+      </h2>
       <div className="grid grid-cols-2 justify-items-center gap-y-40 md:grid-cols-4 lg:grid-cols-4 xl:grid-cold-4 pt-20">
         <Deck />
+      </div>
+      <h2 className='text-5xl mt-20 text-center'>
+        Sponsors
+      </h2>
+      <div className="grid grid-cols-1 justify-items-center gap-y-40 md:grid-cols-3 lg:grid-cols-3 xl:grid-cold-3 pt-20">
+        <Sponsors />
       </div>
     </>
   )
