@@ -68,14 +68,14 @@ const sponsor = [
 
 const About = () => {
   return (
-    <div className="mx-auto ml-0 flex flex-row flex-wrap items-center justify-center  lg:ml-96">
-      <div className=" h-40 w-40 shrink">
+    <div className="mx-auto ml-0 flex flex-row flex-wrap items-center justify-center  lg:ml-60 ">
+      <div className=" h-50 w-50 shrink z-40">
         <img src={Favicon} />
         <img src={Logo} />
       </div>
-      <div className="basis-2/3 space-y-10 p-10">
-        <h2 className=" mx-auto max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-5xl ">
-          About Xplore
+      <div className="basis-2/3 space-y-10 p-5 z-40 ">
+        <h2 className="  max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl ">
+          About Xplore '22
         </h2>
         <p>
           A National Level Technical Symposium conducted by the Department of
@@ -138,8 +138,9 @@ const Sponsors = () => {
 const Contained = () => {
   return (
     <>
+    
       <About />
-      <h2 className="mx-auto max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl ">
+      <h2 className="mx-auto max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl z-40">
         Events
       </h2>
       <div className="xl:grid-cold-4 grid grid-cols-2 justify-items-center gap-y-40 pt-20 md:grid-cols-4 lg:grid-cols-4">

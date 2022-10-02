@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
-import flakeIcon from "./Droplet.svg";
+import flakeIcon from "./fish.png";
 
 const Flakes = () => {
   
@@ -47,19 +47,19 @@ const Flakes = () => {
         },
         particles: {
           move: {
-            direction: "bottom",
+            direction: "right",
             enable: true,
             outModes: {
               default: "out"
             },
             size: true,
             speed: {
-              min: 1,
-              max: 3
+              min: 3,
+              max: 4
             }
           },
           number: {
-            value: 50,
+            value: 5,
           },
           opacity: {
             value: 1,
@@ -83,8 +83,8 @@ const Flakes = () => {
           },
           size: {
             value: {
-              min: 3,
-              max: 5
+              min: 20,
+              max: 25
             }
           },
         },
