@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { useSprings, animated, to as interpolate } from '@react-spring/web'
-import { useDrag } from 'react-use-gesture'
+import React from 'react'
+import { animated } from '@react-spring/web'
+import { Link } from 'react-router-dom';
 
-import Drawer from "../components/drawer.jsx"
+import Favicon from '../assets/icons/favicon.png'
+import Logo from '../assets/icons/logo.png'
 import Golf from '../assets/events/code-golfing.png';
 import Wheel from '../assets/events/hack-wheel.png';
 import Bugs from '../assets/events/hugs-bugs.png';
@@ -11,66 +12,20 @@ import Scroll from '../assets/events/scroll-unveilling.png';
 import Brainz from '../assets/events/select-from-brainz.png';
 import Coat from '../assets/events/turn-coat.png';
 import Whack from '../assets/events/whack-a-bug.png';
-import { Link } from 'react-router-dom';
 
 
 const cards = [Golf, Wheel, Bugs, Santa, Scroll, Brainz, Coat, Whack];
-const temp = ['../assets/events/santa-maria-hunt.png','../assets/events/code-golfing.png','../assets/events/hack-wheel.png','../assets/events/hugs-bugs.png','../assets/events/scroll-unveilling.png','../assets/events/select-from-brainz.png','../assets/events/turn-coat.png','../assets/events/whack-a-bug.png']
 
-const to = (i) => ({
-  x: 0,
-  y: i * -4,
-  scale: 1,
-  rot: -10 + Math.random() * 20,
-  delay: i * 100,
-})
-const from = (_i ) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
-
-const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
-
-function Deck() {
-  const [gone] = useState(() => new Set()) 
-  const [props, api] = useSprings(cards.length, i => ({
-    ...to(i),
-    from: from(i),
-  })) 
-  
-  const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
-    const trigger = velocity > 0.2 
-    const dir = xDir < 0 ? -1 : 1 
-    if (!down && trigger) gone.add(index) 
-    api.start(i => {
-      if (index !== i) return 
-      const isGone = gone.has(index)
-      const x = isGone ? (200 + window.innerWidth) * dir : down ? mx : 0 
-      const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0) 
-      const scale = down ? 1.1 : 1 
-      return {
-        x,
-        rot,
-        scale,
-        delay: undefined,
-        config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
-      }
-    })
-    if (!down && gone.size === cards.length)
-      setTimeout(() => {
-        gone.clear()
-        api.start(i => to(i))
-      }, 600)
-  })
+const Deck = () => {
  return (
     <>
-      {props.map(({ x, y, rot, scale }, i) => (
-        <animated.div className="bg-auto will-change-transform" key={i} style={{ x, y }}>
+      {cards.map(( item,index ) => (
+        <animated.div className="bg-auto will-change-transform" key={index}>
           <animated.div
-            {...bind(i)}
             style={{
-              transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`
+              backgroundImage: `url(${item})`,
             }}
-            className={ `bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:origin-top `}
+            className={ `bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:rotate-90 `}
           />
           <Link className='btn btn-primary'>Know More</Link>
         </animated.div>
@@ -81,17 +36,34 @@ function Deck() {
 
 const Contained = () => {
   return (
-    <div className=''>
+    <>
+      <div className="grid grid-cols-2 place-items-center">
+        <div className='w-40 h-40'>
+          <img src={Favicon} />
+          <img src={Logo} />
+        </div>
+        <div className="p-10 space-y-10">
+          <h2 className=' text-5xl'>About Xplore</h2>
+          <p>
+            A National Level Technical Symposium conducted by the Department of Computer Science and Engineering- Loyola-ICAM College Of Engineering and Technology.  The event is to unfold through 8 stages which are technical in nature and is to be held on the 8th of October, 2022. We welcome all the participants to benefit from this event
+          </p>
+          <ul>
+            <li>
+              <a href="https://forms.gle/z72CM5QPpQopoJhk8" className="btn btn-main-md">Register Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="grid grid-cols-2 justify-items-center gap-y-40 md:grid-cols-4 lg:grid-cols-4 xl:grid-cold-4 pt-20">
         <Deck />
       </div>
-    </div>
+    </>
   )
 }
 
 const Home = () => {
   return(
-    <Drawer content={<Contained />} />
+    <Contained />
   )
 }
 
