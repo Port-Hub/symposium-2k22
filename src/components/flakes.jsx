@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
-import flakeIcon from "./Flake.svg";
+import flakeIcon from "./Droplet.svg";
 
 const Flakes = () => {
   
@@ -29,7 +29,7 @@ const Flakes = () => {
               mode: "push",
             },
             onHover: {
-              enable: true,
+              enable: false,
               mode: "bounce",
             },
             resize: true,
@@ -38,34 +38,38 @@ const Flakes = () => {
             push: {
               quantity: 1,
             },
-            repulse: {
-              distance: 100,
+            trail: {
+              delay: 0.005,
+              quantity: 5,
+              pauseOnStop: true
             },
           },
         },
         particles: {
-          color: {
-            value: "#000",
-          },
-          collisions: {
-            enable: true,
-            mode: "destroy",
-          },
           move: {
-            directions: "bottom",
+            direction: "bottom",
             enable: true,
             outModes: {
-              default: "destroy",
+              default: "out"
             },
-            random: false,
-            speed: 1,
-            straight: true,
+            size: true,
+            speed: {
+              min: 1,
+              max: 3
+            }
           },
           number: {
-            value: 30,
+            value: 50,
           },
           opacity: {
             value: 1,
+            animation: {
+              enable: false,
+              startValue: "max",
+              destroy: "min",
+              speed: 0.3,
+              sync: true
+            }
           },
           shape: {
             image: [
@@ -78,7 +82,10 @@ const Flakes = () => {
             type: 'image',
           },
           size: {
-            value: { min: 1, max: 6 },
+            value: {
+              min: 3,
+              max: 5
+            }
           },
         },
       }}
