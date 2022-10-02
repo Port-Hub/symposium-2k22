@@ -3,9 +3,9 @@ import Logo from "../assets/icons/logo.png";
 const Navbar = () => {
     return(
       <>
-           <div className="sticky top-0 navbar bg-transparent z-10">
+           <div className="sticky top-0 navbar bg-sea-theme bg-cover z-10">
               <div className="navbar-start">
-                <a className="btn btn-ghost px-10 normal-case text-xl"><img src={Logo} /></a>
+                <a className="btn btn-ghost normal-case text-xl"><img src={Logo} /></a>
               </div>
 
               {/* <div className="navbar-center hidden xl:flex lg:flex">

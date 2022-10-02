@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from 'react-use-gesture'
+import Flakes from "../components/flakes.jsx"
+
 import Drawer from "../components/drawer.jsx"
 import Golf from '../assets/events/code-golfing.png';
 import Wheel from '../assets/events/hack-wheel.png';
@@ -67,7 +69,7 @@ function Deck() {
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i]})`,
             }}
-            className="bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary"
+            className="bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:origin-top"
           />
         </animated.div>
       ))}
@@ -78,7 +80,8 @@ function Deck() {
 const Contained = () => {
   return (
     <div className='container mx-auto'>
-      <div className="flex flex-wrap flex-row pt-20">
+      <Flakes />
+      <div className="flex flex-row pt-20">
         <Deck />
       </div>
     </div>

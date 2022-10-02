@@ -2,9 +2,9 @@ const Drawer = (props) => {
     return (
     <div className="drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          <label htmlFor="my-drawer" className="btn btn-square btn-ghost drawer-button">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <div className="drawer-content bg-sea-theme bg-cover">
+          <label htmlFor="my-drawer" className="sticky top-10 left-1/2 btn btn-square btn-ghost drawer-button">
+            <h2 className=" text-2xl btn btn-accent bg-transparent border-none">Events</h2>
           </label>
           {props.content}
         </div>

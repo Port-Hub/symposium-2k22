@@ -18,6 +18,7 @@ const Flakes = () => {
     <Particles
       id="tsparticles"
       init={particlesInit}
+      className="z-30"
       loaded={particlesLoaded}
       options={{
         fpsLimit: 75,
