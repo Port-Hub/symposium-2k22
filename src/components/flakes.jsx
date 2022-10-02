@@ -55,7 +55,7 @@ const Flakes = () => {
             directions: "bottom",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "destroy",
             },
             random: false,
             speed: 1,
