@@ -2,7 +2,7 @@ const Drawer = (props) => {
     return (
     <div className="drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content bg-sea-theme bg-cover">
+        <div className="drawer-content">
           <label htmlFor="my-drawer" className="sticky top-10 left-1/2 btn btn-square btn-ghost drawer-button">
             <h2 className=" text-2xl btn btn-accent bg-transparent border-none">Events</h2>
           </label>

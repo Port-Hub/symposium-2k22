@@ -1,108 +1,95 @@
-import React, { useRef } from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { config } from "react-spring";
-import Sky from "../assets/parallax/Proper/PNG/1sky.png";
-import Cloud from "../assets/parallax/Proper/SVG/2cloud.svg";
-import Sea from "../assets/parallax/Proper/PNG/3sea.png";
-import MainIsl from "../assets/parallax/Proper/SVG/4 Main Island.svg";
-import Ship from "../assets/parallax/Proper/SVG/5ship.svg";
-import Rocks from "../assets/parallax/Proper/SVG/6rocks.svg";
-import xplore from "../assets/parallax/Proper/SVG/8Explore.svg";
-import { Link } from "react-router-dom";
-import scroll from "../assets/parallax/Proper/SVG/scroll.gif";
+import React, { useState } from 'react'
+import { useSprings, animated, to as interpolate } from '@react-spring/web'
+import { useDrag } from 'react-use-gesture'
+
+import Drawer from "../components/drawer.jsx"
+import Golf from '../assets/events/code-golfing.png';
+import Wheel from '../assets/events/hack-wheel.png';
+import Bugs from '../assets/events/hugs-bugs.png';
+import Santa from '../assets/events/santa-maria-hunt.png';
+import Scroll from '../assets/events/scroll-unveilling.png';
+import Brainz from '../assets/events/select-from-brainz.png';
+import Coat from '../assets/events/turn-coat.png';
+import Whack from '../assets/events/whack-a-bug.png';
+
+
+const cards = [Golf, Wheel, Bugs, Santa, Scroll, Brainz, Coat, Whack];
+
+const to = (i) => ({
+  x: 0,
+  y: i * -4,
+  scale: 1,
+  rot: -10 + Math.random() * 20,
+  delay: i * 100,
+})
+const from = (_i ) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
+
+const trans = (r, s) =>
+  `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+
+function Deck() {
+  const [gone] = useState(() => new Set()) 
+  const [props, api] = useSprings(cards.length, i => ({
+    ...to(i),
+    from: from(i),
+  })) 
+  
+  const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
+    const trigger = velocity > 0.2 
+    const dir = xDir < 0 ? -1 : 1 
+    if (!down && trigger) gone.add(index) 
+    api.start(i => {
+      if (index !== i) return 
+      const isGone = gone.has(index)
+      const x = isGone ? (200 + window.innerWidth) * dir : down ? mx : 0 
+      const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0) 
+      const scale = down ? 1.1 : 1 
+      return {
+        x,
+        rot,
+        scale,
+        delay: undefined,
+        config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
+      }
+    })
+    if (!down && gone.size === cards.length)
+      setTimeout(() => {
+        gone.clear()
+        api.start(i => to(i))
+      }, 600)
+  })
+ return (
+    <>
+      {props.map(({ x, y, rot, scale }, i) => (
+        <animated.div className="bg-auto w-80 h-52 will-change-transform justify-center" key={i} style={{ x, y }}>
+          <animated.div
+            {...bind(i)}
+            style={{
+              transform: interpolate([rot, scale], trans),
+              backgroundImage: `url(${cards[i]})`,
+            }}
+            className="bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:origin-top"
+          />
+        </animated.div>
+      ))}
+    </>
+  )
+}
+
+const Contained = () => {
+  return (
+    <div className='container mx-auto'>
+      <div className="flex flex-row pt-20">
+        <Deck />
+      </div>
+    </div>
+  )
+}
 
 const Home = () => {
-  const parallax = useRef();
-  return (
-    <div className="h-screen w-screen">
-      <Parallax ref={parallax} pages={6} config={config.stiff} style={{backgroundColor:"#C2DFFF"}}>
-
-
-      <ParallaxLayer
-          offset={0}
-          speed={0.5}
-          onClick={() => parallax.current.scrollTo(1)}        >
-          <img src={scroll} className="m-auto h-fit w-fit " />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
-          speed={0.5}
-          sticky={{ start: 1, end: 8 }}
-          onClick={() => parallax.current.scrollTo(2)}
-        >
-          <img src={Sky} className="h-screen w-screen" />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={1}
-          sticky={{ start: 2, end: 8 }}
-          onClick={() => parallax.current.scrollTo(3)}
-        >
-          <img src={Cloud} className="h-full w-full" />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3}
-          speed={1}
-          sticky={{ start: 3, end: 8 }}
-          onClick={() => parallax.current.scrollTo(4)}
-          style={{
-            display: 'flex',
-            alignItems: "center",
-            justifyContent: 'center',
-          }}
-        >
-          <img src={Sea} className="h-full w-full " />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4}
-          speed={1}
-          sticky={{ start: 4, end: 8 }}
-          onClick={() => parallax.current.scrollTo(5)}
-        >
-          <img src={MainIsl} className="h-full w-full" />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={5}
-          speed={1}
-          sticky={{ start: 5, end: 8 }}
-          onClick={() => parallax.current.scrollTo(6)}
-        >
-          <img src={Ship} className="h-full w-full" />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={6}
-          speed={1}
-          sticky={{ start: 6, end: 8 }}
-          onClick={() => parallax.current.scrollTo(7)}
-        >
-          <img src={Rocks} className="h-full w-full" />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2} speed={1} sticky={{ start: 6, end: 8 }} onClick={() => parallax.current.scrollTo(8)}>
-          <img
-            src={xplore}
-            className="  m-auto w-5/6 hover:translate-y-12 transition-all delay-200 duration-100 hover:opacity-0 "
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={7} speed={1} sticky={{ start: 7, end: 8 }} style={{
-            display: 'flex',
-            alignItems: "center",
-            justifyContent: 'center',
-            backgroundSize: 'cover'
-                      }}>
-          <Link to="/events"><button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4  border-blue-700 hover:border-blue-500 rounded  mt-96 h-25 w-80 text-4xl font-sans ">Explore Events</button></Link>
-        </ParallaxLayer>
-
-      </Parallax>
-      
-    </div>
-  );
-};
+  return(
+    <Drawer content={<Contained />} />
+  )
+}
 
 export default Home;

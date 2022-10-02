@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
-import Events from "./pages/events";
-import Home from "./pages/home";
+import Landing from "./pages/landing";
 import Layout from "./components/layout";
+import routeList from "./components/routes";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Landing />} />
         <Route element={<Layout> <Outlet /> </Layout>} >
-          <Route path="/events" element={<Events />}></Route>
+          {routeList}
         </Route>
       </Routes>
     </Router>
