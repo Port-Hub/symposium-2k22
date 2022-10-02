@@ -11,9 +11,11 @@ import Scroll from '../assets/events/scroll-unveilling.png';
 import Brainz from '../assets/events/select-from-brainz.png';
 import Coat from '../assets/events/turn-coat.png';
 import Whack from '../assets/events/whack-a-bug.png';
+import { Link } from 'react-router-dom';
 
 
 const cards = [Golf, Wheel, Bugs, Santa, Scroll, Brainz, Coat, Whack];
+const temp = ['../assets/events/santa-maria-hunt.png','../assets/events/code-golfing.png','../assets/events/hack-wheel.png','../assets/events/hugs-bugs.png','../assets/events/scroll-unveilling.png','../assets/events/select-from-brainz.png','../assets/events/turn-coat.png','../assets/events/whack-a-bug.png']
 
 const to = (i) => ({
   x: 0,
@@ -61,15 +63,16 @@ function Deck() {
  return (
     <>
       {props.map(({ x, y, rot, scale }, i) => (
-        <animated.div className="bg-auto w-80 h-52 will-change-transform justify-center" key={i} style={{ x, y }}>
+        <animated.div className="bg-auto will-change-transform" key={i} style={{ x, y }}>
           <animated.div
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
+              backgroundImage: `url(${cards[i]})`
             }}
-            className="bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:origin-top"
+            className={ `bg-contain w-40 h-72 rounded-2xl will-change-transform shadow-lg shadow-primary hover:origin-top `}
           />
+          <Link className='btn btn-primary'>Know More</Link>
         </animated.div>
       ))}
     </>
@@ -78,8 +81,8 @@ function Deck() {
 
 const Contained = () => {
   return (
-    <div className='container mx-auto'>
-      <div className="flex flex-row pt-20">
+    <div className=''>
+      <div className="grid grid-cols-2 justify-items-center gap-y-40 md:grid-cols-4 lg:grid-cols-4 xl:grid-cold-4 pt-20">
         <Deck />
       </div>
     </div>
