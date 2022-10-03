@@ -66,11 +66,11 @@ const sponsor = [
 
 const About = () => {
   return (
-    <div className="mx-auto flex flex-row flex-wrap items-center justify-center gap-x-10">
+    <div className="mx-auto flex flex-row flex-wrap items-center justify-center gap-x-10 z-40">
       <div className="shrink z-40 w-80 h-80">
         <img src={Favicon} />
       </div>
-      <div className="basis-2/3 space-y-10 z-40 px-20">
+      <div className="basis-2/3 space-y-10 z-40 px-10">
         <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent ">
           About Xplore '22
         </h2>
@@ -83,7 +83,7 @@ const About = () => {
         </p>
         <a
           href="https://forms.gle/z72CM5QPpQopoJhk8"
-          className="btn-main-md btn mx-auto align-middle"
+          className="btn-main-md btn mx-auto align-middle space-y-10"
           target="_blank"
         >
           Register Now
@@ -97,7 +97,7 @@ const Deck = () => {
   return (
     <>
       {cards.map((item, index) => (
-        <div className="bg-auto" key={index}>
+        <div className="bg-auto z-40" key={index}>
           <div
             style={{
               backgroundImage: `url(${item.image})`,
@@ -117,7 +117,7 @@ const Sponsors = () => {
   return (
     <>
       {sponsor.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="z-40">
           <a href={item.link}>
             <div
               style={{
@@ -139,7 +139,7 @@ const Home = () => {
       <h2 className="mx-auto max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl z-40">
         Events
       </h2>
-      <div className="xl:grid-cold-4 grid grid-cols-2 justify-items-center gap-y-40 pt-20 md:grid-cols-4 lg:grid-cols-4">
+      <div className="xl:grid-cold-4 grid grid-cols-2 justify-items-center gap-y-40 pt-20 md:grid-cols-4 lg:grid-cols-4 z-40">
         <Deck />
       </div>
       <h2 className="mx-auto mt-20 mb-20 max-w-3xl border-zinc-900 bg-gradient-to-r  from-emerald-500 via-indigo-800  to-purple-600 bg-clip-text text-center  text-5xl font-extrabold text-transparent sm:text-5xl ">
