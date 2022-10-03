@@ -131,7 +131,7 @@ const EArray = [
 
 const ECards = (props) => {
     return(
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 z-40 shadow-2xl shadow-sky-700 rounded-3xl">
+        <div id = {props.id} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 z-40 shadow-2xl shadow-sky-700 rounded-3xl">
             <div className='z-40'>
                 <img src={props.image} className="h-60 rounded-xl" />
             </div>
@@ -157,14 +157,14 @@ const ECards = (props) => {
 const Events = () => {
     return (
         <div className="container mx-auto space-y-10">
-            <ECards image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} />
-            <ECards image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} />
-            <ECards image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} />
-            <ECards image={EArray[3].image} description={EArray[3].description} rules={EArray[3].rules} />
-            <ECards image={EArray[4].image} description={EArray[4].description} rules={EArray[4].rules} />
-            <ECards image={EArray[5].image} description={EArray[5].description} rules={EArray[5].rules} />
-            <ECards image={EArray[6].image} description={EArray[6].description} rules={EArray[6].rules} />
-            <ECards image={EArray[7].image} description={EArray[7].description} rules={EArray[7].rules} />
+            <ECards id={EArray[0].id} image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} />
+            <ECards id={EArray[1].id} image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} />
+            <ECards id={EArray[2].id} image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} />
+            <ECards id={EArray[3].id} image={EArray[3].image} description={EArray[3].description} rules={EArray[3].rules} />
+            <ECards id={EArray[4].id} image={EArray[4].image} description={EArray[4].description} rules={EArray[4].rules} />
+            <ECards id={EArray[5].id} image={EArray[5].image} description={EArray[5].description} rules={EArray[5].rules} />
+            <ECards id={EArray[6].id} image={EArray[6].image} description={EArray[6].description} rules={EArray[6].rules} />
+            <ECards id={EArray[7].id} image={EArray[7].image} description={EArray[7].description} rules={EArray[7].rules} />
         </div>
     )
 }
