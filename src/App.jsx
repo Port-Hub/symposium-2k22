@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import Landing from "./pages/landing";
 import Layout from "./components/layout";
-import routeList from "./components/routes";
+import Home from "./pages/home";
 import Events from "./pages/events";
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route element={<Layout> <Outlet /> </Layout>} >
-          {routeList}
           <Route exact path="/events" element={<Events />} />
+          <Route exact path="/home" element={<Home />} />
         </Route>
       </Routes>
     </Router>

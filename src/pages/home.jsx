@@ -18,35 +18,35 @@ import Magoosh from "../assets/sponsors/magoosh-logo.png";
 const cards = [
   {
     image: Golf,
-    link: "golfing",
+    link: "/events",
   },
   {
     image: Wheel,
-    link: "wheel",
+    link: "/events",
   },
   {
     image: Bugs,
-    link: "bugs",
+    link: "/events",
   },
   {
     image: Santa,
-    link: "hunt",
+    link: "/events",
   },
   {
     image: Scroll,
-    link: "scroll",
+    link: "/events",
   },
   {
     image: Brainz,
-    link: "brainz",
+    link: "/events",
   },
   {
     image: Coat,
-    link: "turncoat",
+    link: "/events",
   },
   {
     image: Whack,
-    link: "whackbug",
+    link: "/events",
   },
 ];
 
@@ -133,10 +133,9 @@ const Sponsors = () => {
   );
 };
 
-const Contained = () => {
+const Home = () => {
   return (
     <>
-    
       <About />
       <h2 className="mx-auto max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl z-40">
         Events
@@ -152,10 +151,6 @@ const Contained = () => {
       </div>
     </>
   );
-};
-
-const Home = () => {
-  return <Contained />;
 };
 
 export default Home;

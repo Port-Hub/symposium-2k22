@@ -1,14 +1,14 @@
 import { Route } from "react-router-dom";
 
-import Codegolfing from "../pages/Events/Codegolfing";
-import Hackwheel from "../pages/Events/Hackwheel";
-import HugsandBugs from "../pages/Events/HugsandBugs";
-import Santamariahunt from "../pages/Events/Santamariahunt";
-import Scrollunveilling from "../pages/Events/Scrollunveilling";
-import Selectfrombrainz from "../pages/Events/Selectfrombrainz";
-import Turncoat from "../pages/Events/Turncoat";
-import Whackabug from "../pages/Events/Whackabug";
-import Home from "../pages/home";
+import Codegolfing from "./Events/Codegolfing";
+import Hackwheel from "./Events/Hackwheel";
+import HugsandBugs from "./Events/HugsandBugs";
+import Santamariahunt from "./Events/Santamariahunt";
+import Scrollunveilling from "./Events/Scrollunveilling";
+import Selectfrombrainz from "./Events/Selectfrombrainz";
+import Turncoat from "./Events/Turncoat";
+import Whackabug from "./Events/Whackabug";
+import Home from "../src/pages/home";
 
 
 

@@ -10,7 +10,7 @@ const Navbar = () => {
               </div>
 
               <div className="navbar-end">
-                <a href="https://forms.gle/z72CM5QPpQopoJhk8" className="btn">Register Now!</a>
+                <a href="https://forms.gle/z72CM5QPpQopoJhk8" target="_blank" className="btn">Register Now!</a>
               </div>
             </div>
       </>
