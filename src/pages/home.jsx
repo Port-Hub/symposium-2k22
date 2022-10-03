@@ -3,7 +3,6 @@ import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
 import Favicon from "../assets/icons/favicon.png";
-import Logo from "../assets/icons/logo.png";
 import Golf from "../assets/events/code-golfing.png";
 import Wheel from "../assets/events/hack-wheel.png";
 import Bugs from "../assets/events/hugs-bugs.png";
@@ -68,13 +67,12 @@ const sponsor = [
 
 const About = () => {
   return (
-    <div className="mx-auto ml-0 flex flex-row flex-wrap items-center justify-center  lg:ml-60 ">
-      <div className=" h-50 w-50 shrink z-40">
+    <div className="mx-auto flex flex-row flex-wrap items-center justify-center gap-x-10">
+      <div className="shrink z-40 w-80 h-80">
         <img src={Favicon} />
-        <img src={Logo} />
       </div>
-      <div className="basis-2/3 space-y-10 p-5 z-40 ">
-        <h2 className="  max-w-3xl border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl ">
+      <div className="basis-2/3 space-y-10 z-40 px-20">
+        <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent ">
           About Xplore '22
         </h2>
         <p>

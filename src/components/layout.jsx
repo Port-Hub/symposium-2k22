@@ -3,7 +3,7 @@ import Flakes from "./flakes";
 
 const Layout = (props) => {
     return(
-        <div className="bg-sea-theme bg-cover">
+        <div className="bg-gradient-to-r from-cyan-400 to-cyan-600">
             <Flakes />
             <Navbar />
             {props.children}
