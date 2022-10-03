@@ -11,17 +11,15 @@ const EArray = [
     {
         "name": "Code Golfing" ,
         "image": Golfing,
+        "id":"golfing",
         "description": <>
-        <li>With lots of exploration journeys going around, let's have some fun time here.</li>
         <li>Columbus recreational club presents to you “Code Golf” - a playground where you show off your excellency in codes.</li> 
-        <li>But how? It goes without saying that you win by providing us the shortest source code that solves the given puzzle which is very much similar to the famous “Golf” game where two players compete with each other and the one with the fewest club strokes wins.</li> 
+        <li>It goes without saying that you win by providing us the shortest source code that solves the given puzzle which is very much similar to the famous “Golf” game where two players compete with each other and the one with the fewest club strokes wins.</li> 
         <li>The event will be conducted on the official code golf site: Code Golf.</li>  
         <li>Everyone will login with their github account and follow our main page's account to keep track of the leader board.</li>  
-        <li>Even if they don't have a github account we will provide enough time to register.</li>  
         <li>There will be 5 golf holes. Each hole will contain a puzzle to solve in any of their preferred programming language.</li>  
         <li>The difficulty of the puzzle will gradually increase in each hole.</li>  
-        <li>At the end the top 3 in the leader board will be declared as winners.</li>  
-        <li>We will also provide cheat sheet for short codes in all major languages.</li></>,
+        <li>At the end the top 3 in the leader board will be declared as winners.</li></>,
         "rules": <><li>Login to Code Golf using your github account</li>
         <li>Stick to the timer to solve every puzzle. Any submission after it won't be accepted.</li>
         <li>Abide by the final decisions taken by the coordinators.</li>
@@ -30,6 +28,7 @@ const EArray = [
     {
         "name": "Hugs & Bugs",
         "image": Hugs,
+        "id" : "hugs",
         "description": <><li>The game consists of Two Rounds</li>
         <li> Here each buddy should code alternatively, First person will code for the first few minutes followed by the second person . When the first person is coding the second person will be engaged with some surprise activity. </li>
         <li> The first round is an elimination round. Here each buddy is given five minutes to solve the given code. (Difficulty level : Easy, 10 minutes)</li>
@@ -39,14 +38,12 @@ const EArray = [
         "rules": <><li>2 members per team.</li> 
         <li>Mobile phones and internet usage is not permitted</li>
         <li>The decision of the event coordinators will be final</li>
-        <li>Violating the rules or any kind of cheating leads to disqualification</li>
-        <li>Please read the description</li>
-        <li>Rules listed are subject to change as per the discretion of the event heads and the organizing committee</li>
-        <li>Every participant should carry an identity card/proof</li></>
+        <li>Violating the rules or any kind of cheating leads to disqualification</li></>
     },
     {
         "name": "Santa Maria Hunt",
         "image": Santa,
+        "id" : "santa",
         "description":<><li>The event consists of 7 sequential rounds.</li>
         <li> Each team will be given a unique clue at the beginning of the  hunt.</li>
         <li> The team must decrypt the clue using a cipher technique from the given set of cipher techniques.</li>
@@ -56,16 +53,17 @@ const EArray = [
         <li>The team has to decode the next clue and repeat the previous process till the final round.</li>
         <li> In the final round, the team must open an encrypted file.</li>
         <li> The first to open the encrypted file will be the winner.</li></>,
-        "rules": <><li>Maximum 1-3 per team.</li> 
-        <li>Each participant should carry identity proof.</li>
+        "rules": <>
         <li>Internet usage is permitted.</li>
-        <li>There will be totally 7 clues. The team who decrypts and finds all the 7 clues to the treasure will win the hunt.</li>
-        <li>The teams should report at the event venue at the beginning and end of the event, The decision of the event coordinators will be final.</li>
-        <li>Rules listed are subject to change as per the discretion of the Event Heads and the Organizing Committee Violating the rules, property damage or any kind of cheating leads to disqualification.</li></>
+        <li>The team who decrypts and finds all the 7 clues to the treasure will win the hunt.</li>
+        <li>The teams should report at the event venue at the beginning and end of the event.</li>
+        <li>The decision of the event coordinators will be final.</li>
+        <li>Violating the rules, property damage or any kind of cheating leads to disqualification.</li></>
     },
     {
         "name": "Select from Brainz",
         "image": Brainz,
+        "id":"brainz",
         "description": <><li>25 questions will be asked.</li>
         <li>Bring Your Own Device</li>
         <li> Once every 6 mins a picture-based pop quiz will be conducted</li>
@@ -80,6 +78,7 @@ const EArray = [
     {
         "name": "Whack-A-Bug",
         "image": Bugs,
+        "id":"bugs",
         "description": 
         <>
             Whack-A-Bug is a scenario based Debugging contest in which the participants 
@@ -95,6 +94,7 @@ const EArray = [
     {
         "name": "Hack Wheel",
         "image": Wheel,
+        "id":"wheel",
         "description":<><li>Hack Wheel is a one day hackathon which will be conducted on 8th October.</li>
         <li>The problem statements will be announced at the start of the event.</li>
         <li>Within the end of the day the participants should have developed the ideas into prototypes.</li>
@@ -107,6 +107,7 @@ const EArray = [
     {
         "name": "Scroll Unveilling",
         "image": Scroll,
+        "id":"scroll",
         "description": <><li>Scroll Unveiling is an event where the participating teams will be presenting their paper. </li>
         <li>The judges will be judging based on the way of explanation of their respective slides.</li>
         <li> The teams with  clear cut and quality presentations will be awarded with respective prizes.</li></>,
@@ -116,9 +117,10 @@ const EArray = [
     {
         "name": "Turn Coat",
         "image": Turn,
-        "description": <><li>Challengers will be given a topic (technology, science).</li>
-        <li>1 minute to prepare, 3 minutes to talk about their topic.</li>
-        <li>They will have to switch sides (for/against) their topic at the judges signal.</li></>,
+        "id":"turn",
+        "description": <>Challengers will be given a topic (technology, science).
+        1 minute to prepare, 3 minutes to talk about their topic.
+        They will have to switch sides (for/against) their topic at the judges signal.</>,
         "rules": <> <li>Solo event.</li> 
         <li>1 minute prep time, 3 minutes to talk.</li>
         <li>Keep language polite.</li>
@@ -134,13 +136,13 @@ const ECards = (props) => {
                 <img src={props.image} className="h-60 rounded-xl" />
             </div>
             <div className='z-40 space-y-10 m-14'>
-                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent z-40">
+                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent z-40">
                     Description
                 </h2>
                 <p className='z-40'>
                     {props.description} 
                 </p>
-                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent z-40">
+                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent z-40">
                     Rules
                 </h2>
                 <div>
