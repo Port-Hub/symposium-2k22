@@ -1,5 +1,5 @@
 import React from 'react'
-import Scroll from '../../assets/Scroll.png'
+import Scroll from '../../assets/scroll.png'
 
 export default function Whackabug() {
   return (
