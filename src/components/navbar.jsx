@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return(
       <>
-           <div className="sticky top-0 navbar z-10">
+           <div className="sticky top-0 navbar z-50">
               <div className="navbar-start">
                 <Link to="/home" className="btn btn-ghost normal-case text-xl"><img src={Logo} /></Link>
               </div>

@@ -125,15 +125,15 @@ const EArray = [
 
 const ECards = (props) => {
     return(
-        <div className='flex flex-row flex-wrap justify-center items-center gap-20 mx-auto z-40'>
-            <div className='z-40 '>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 justify-items-center gap-20 mx-auto z-40">
+            <div className='z-40'>
                 <img src={props.image} className="h-60 rounded-xl" />
             </div>
-            <div className='space-y-10 z - 14'>
+            <div className='space-y-10 z-40'>
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent z-40">
                     Description
                 </h2>
-                <p className='prose prose-lg z-40'>
+                <p className='z-40'>
                     {props.description} 
                 </p>
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent z-40">
@@ -150,7 +150,7 @@ const ECards = (props) => {
 
 const Events = () => {
     return (
-        <div className="container gap-y-10">
+        <div className="gap-y-10">
             <ECards image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} />
             <ECards image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} />
             <ECards image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} />
