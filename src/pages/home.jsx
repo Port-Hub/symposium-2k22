@@ -1,5 +1,4 @@
 import React from "react";
-import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
 import Favicon from "../assets/icons/favicon.png";
@@ -98,17 +97,17 @@ const Deck = () => {
   return (
     <>
       {cards.map((item, index) => (
-        <animated.div className="bg-auto will-change-transform" key={index}>
-          <animated.div
+        <div className="bg-auto" key={index}>
+          <div
             style={{
               backgroundImage: `url(${item.image})`,
             }}
-            className={`h-72 w-40 rounded-2xl bg-contain shadow-lg shadow-primary will-change-transform `}
+            className={`h-72 w-40 rounded-2xl bg-contain shadow-lg shadow-primary `}
           />
           <Link to={item.link} className="btn btn-primary left-1/2 mt-10">
             Know More
           </Link>
-        </animated.div>
+        </div>
       ))}
     </>
   );
@@ -118,16 +117,16 @@ const Sponsors = () => {
   return (
     <>
       {sponsor.map((item, index) => (
-        <animated.div key={index}>
+        <div key={index}>
           <a href={item.link}>
-            <animated.div
+            <div
               style={{
                 backgroundImage: `url(${item.image})`,
               }}
-              className={`h-28 w-64 bg-contain will-change-transform  `}
+              className={`h-28 w-80 bg-center bg-no-repeat bg-contain`}
             />
           </a>
-        </animated.div>
+        </div>
       ))}
     </>
   );
