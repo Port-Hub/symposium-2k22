@@ -16,7 +16,7 @@ export default function Whackabug() {
           Whack-A-Bug is a scenario based Debugging contest in which the participants<br /> will be given code snippets that contain one or more bugs in it.<br /> The participants must identify the bugs and debug the code .
         </p>
         <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent ">
-          Rules
+        Rules
         </h2>
         <ul className='list-disc'>
           <li>Each team with exactly 2 members</li>

@@ -18,7 +18,6 @@ const Flakes = () => {
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="z-30"
       loaded={particlesLoaded}
       options={{
         fpsLimit: 75,
@@ -26,10 +25,10 @@ const Flakes = () => {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: "repel",
             },
             onHover: {
-              enable: false,
+              enable: true,
               mode: "bounce",
             },
             resize: true,
@@ -59,7 +58,7 @@ const Flakes = () => {
             }
           },
           number: {
-            value: 5,
+            value: 10,
           },
           opacity: {
             value: 1,
