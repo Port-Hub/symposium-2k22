@@ -5,7 +5,10 @@ export default function Scrollunveilling() {
     <div>
       <div>
         <h1>Description</h1>
-        Scroll Unveiling is an event where the participating teams will be presenting their paper. The judges will be judging based on the way of explanation of their respective slides. The teams with  clear cut and quality presentations will be awarded with respective prizes.<br/>
+        <li>Scroll Unveiling is an event where the participating teams will be presenting their paper. </li>
+        <li>The judges will be judging based on the way of explanation of their respective slides.</li>
+        <li> The teams with  clear cut and quality presentations will be awarded with respective prizes.</li>
+        <br/>
         <br/>THEME 
         <li>Cyber Security</li>
         <li>Smart Agriculture</li>

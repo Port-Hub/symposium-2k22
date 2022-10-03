@@ -5,7 +5,10 @@ export default function Hackwheel() {
     <div>
       <div>
         <h1>Description</h1>
-        Hack Wheel is a one day hackathon which will be conducted on 8th October. The problem statements will be announced at the start of the event. Within the end of the day the participants should have developed the ideas into prototypes and should be pitched before the judges by the end of the day.<br/><br/>Domain<li>Web Development</li><li>AI and ML</li>
+        Hack Wheel is a one day hackathon which will be conducted on 8th October. 
+        The problem statements will be announced at the start of the event. 
+        Within the end of the day the participants should have developed the ideas into prototypes.
+         And should be pitched before the judges by the end of the day.<br/><br/>Domain<li>Web Development</li><li>AI and ML</li>
       </div>
       <div>
         <h1>Rules</h1>

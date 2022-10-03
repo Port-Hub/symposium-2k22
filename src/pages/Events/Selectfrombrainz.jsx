@@ -14,7 +14,7 @@ export default function Selectfrombrainz() {
       <div>
         <h1>Rules</h1>
         <li>The decorum of the event should be maintained.</li> 
-        <li>The judge’s decision will be final and binding</li>
+        <li>The judge's decision will be final and binding</li>
         <li>For the pop quiz only the first three teams which answer correctly will be rewarded with marks or an advantage.</li>
         <li>All questions will circle around programming and computer-based concepts</li>
         <li>Team of 2-3</li>

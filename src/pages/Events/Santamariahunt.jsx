@@ -5,7 +5,15 @@ export default function Santamariahunt() {
     <div>
       <div>
         <h1>Description</h1>
-        The event consists of 7 sequential rounds. Each team will be given a unique clue at the beginning of the  hunt. The team must decrypt the clue using a cipher technique from the given set of cipher techniques. The decrypted message contains the venue of the next clue and a passcode.This passcode  must be presented to the genie(volunteer) present in the venue mentioned in the clue. The genie will verify the passcode and give the next clue. The team has to decode the next clue and repeat the previous process till the final round. In the final round, the team must open an encrypted file. The first to open the encrypted file will be the winner
+        <li>The event consists of 7 sequential rounds.</li>
+        <li> Each team will be given a unique clue at the beginning of the  hunt.</li>
+        <li> The team must decrypt the clue using a cipher technique from the given set of cipher techniques.</li>
+        <li> The decrypted message contains the venue of the next clue and a passcode.</li>
+        <li>This passcode  must be presented to the genie(volunteer) present in the venue mentioned in the clue.</li>
+        <li> The genie will verify the passcode and give the next clue.</li>
+        <li>The team has to decode the next clue and repeat the previous process till the final round.</li>
+        <li> In the final round, the team must open an encrypted file.</li>
+        <li> The first to open the encrypted file will be the winner.</li>
       </div>
       <div>
         <h1>Rules</h1>

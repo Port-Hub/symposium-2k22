@@ -14,8 +14,8 @@ export default function Turncoat() {
         <li> Solo event. </li> 
         <li> 1 minute prep time, 3 minutes to talk.</li>
         <li>Keep language polite.</li>
-        <li>Rules may change at judge’s discretion. </li>
-        <li>Judge’s decision is final</li>
+        <li>Rules may change at judge's discretion. </li>
+        <li>Judge's decision is final</li>
       </div>
     </div>
 
