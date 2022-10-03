@@ -17,35 +17,35 @@ import Magoosh from "../assets/sponsors/magoosh-logo.png";
 const cards = [
   {
     image: Golf,
-    link: "/events",
+    link: "/events#golfing",
   },
   {
     image: Wheel,
-    link: "/events",
+    link: "/events#wheel",
   },
   {
     image: Bugs,
-    link: "/events",
+    link: "/events#hugs",
   },
   {
     image: Santa,
-    link: "/events",
+    link: "/events#santa",
   },
   {
     image: Scroll,
-    link: "/events",
+    link: "/events#scroll",
   },
   {
     image: Brainz,
-    link: "/events",
+    link: "/events#brainz",
   },
   {
     image: Coat,
-    link: "/events",
+    link: "/events#turn",
   },
   {
     image: Whack,
-    link: "/events",
+    link: "/events#bugs",
   },
 ];
 
