@@ -6,12 +6,18 @@ import Scroll from "../assets/thumb/scroll-unveilling.png"
 import Brainz from "../assets/thumb/select-from-brainz.png"
 import Turn from "../assets/thumb/turn-coat.png"
 import Bugs from "../assets/thumb/whack-a-bug.png"
+import { UserGroupIcon } from "@heroicons/react/24/solid";
+import { HomeModernIcon } from "@heroicons/react/24/solid";
+import { ClockIcon } from "@heroicons/react/24/solid";
 
 const EArray = [
     {
         "name": "Code Golfing" ,
         "image": Golfing,
         "id":"golfing",
+        "number": "1",
+        "venue": "A12",
+        "time": "2:00 pm - 3:30 pm",
         "description": <>
         <li>Columbus recreational club presents to you “Code Golf” - a playground where you show off your excellency in codes.</li> 
         <li>It goes without saying that you win by providing us the shortest source code that solves the given puzzle which is very much similar to the famous “Golf” game where two players compete with each other and the one with the fewest club strokes wins.</li> 
@@ -29,6 +35,9 @@ const EArray = [
         "name": "Hugs & Bugs",
         "image": Hugs,
         "id" : "hugs",
+        "number": "2",
+        "venue": "COE and H22",
+        "time": "10:30 am - 12:00 pm",
         "description": <><li>The game consists of Two Rounds</li>
         <li> Here each buddy should code alternatively, First person will code for the first few minutes followed by the second person . When the first person is coding the second person will be engaged with some surprise activity. </li>
         <li> The first round is an elimination round. Here each buddy is given five minutes to solve the given code. (Difficulty level : Easy, 10 minutes)</li>
@@ -44,6 +53,9 @@ const EArray = [
         "name": "Santa Maria Hunt",
         "image": Santa,
         "id" : "santa",
+        "number": "1 - 3",
+        "venue": "I22, Final Round : A12",
+        "time": "10:30 am - 12:20 pm",
         "description":<><li>The event consists of 7 sequential rounds.</li>
         <li> Each team will be given a unique clue at the beginning of the  hunt.</li>
         <li> The team must decrypt the clue using a cipher technique from the given set of cipher techniques.</li>
@@ -64,6 +76,9 @@ const EArray = [
         "name": "Select from Brainz",
         "image": Brainz,
         "id":"brainz",
+        "number": "2 - 3",
+        "venue": "I24",
+        "time": "2:00 pm - 3:30 pm",
         "description": <><li>25 questions will be asked.</li>
         <li>Bring Your Own Device</li>
         <li> Once every 6 mins a picture-based pop quiz will be conducted</li>
@@ -79,6 +94,9 @@ const EArray = [
         "name": "Whack-A-Bug",
         "image": Bugs,
         "id":"bugs",
+        "number": "2",
+        "venue": "H22",
+        "time": "12:30 pm - 2:00 pm",
         "description": 
         <>
             Whack-A-Bug is a scenario based Debugging contest in which the participants 
@@ -95,6 +113,9 @@ const EArray = [
         "name": "Hack Wheel",
         "image": Wheel,
         "id":"wheel",
+        "number": "4",
+        "venue": "I13 and COE",
+        "time": "9:30 am - 3:00 pm",
         "description":<><li>Hack Wheel is a one day hackathon which will be conducted on 8th October.</li>
         <li>The problem statements will be announced at the start of the event.</li>
         <li>Within the end of the day the participants should have developed the ideas into prototypes.</li>
@@ -108,6 +129,9 @@ const EArray = [
         "name": "Scroll Unveilling",
         "image": Scroll,
         "id":"scroll",
+        "number": "3",
+        "venue": "I21",
+        "time": "9:30 am - 12:00 pm",
         "description": <><li>Scroll Unveiling is an event where the participating teams will be presenting their paper. </li>
         <li>The judges will be judging based on the way of explanation of their respective slides.</li>
         <li> The teams with  clear cut and quality presentations will be awarded with respective prizes.</li></>,
@@ -118,6 +142,9 @@ const EArray = [
         "name": "Turn Coat",
         "image": Turn,
         "id":"turn",
+        "number": "1",
+        "venue": "I24",
+        "time": "10:30 am - 12:00 pm",
         "description": <>Challengers will be given a topic (technology, science).
         1 minute to prepare, 3 minutes to talk about their topic.
         They will have to switch sides (for/against) their topic at the judges signal.</>,
@@ -132,17 +159,29 @@ const EArray = [
 const ECards = (props) => {
     return(
         <div id={props.id} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 z-40 shadow-2xl shadow-sky-700 rounded-3xl">
-            <div className='z-40'>
+            <div className='z-40 space-y-5'>
                 <img src={props.image} className="h-60 rounded-xl" />
+                <div className="flex flex-row gap-x-4 items-center">
+                    <UserGroupIcon className="h-8" />
+                    <p>Team of {props.number}</p>
+                </div>
+                <div className="flex flex-row gap-x-4 items-center">
+                    <HomeModernIcon className="h-8" />
+                    <p>Venue : {props.venue}</p>
+                </div>
+                <div className="flex flex-row gap-x-4 items-center">
+                    <ClockIcon className="h-8" />
+                    <p>Time : {props.time}</p>
+                </div>
             </div>
             <div className='z-40 space-y-10 m-14'>
-                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent z-40">
+                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40">
                     Description
                 </h2>
                 <p className='z-40'>
                     {props.description} 
                 </p>
-                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent z-40">
+                <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40">
                     Rules
                 </h2>
                 <div>
@@ -157,14 +196,14 @@ const ECards = (props) => {
 const Events = () => {
     return (
         <div className="container mx-auto space-y-10">
-            <ECards id={EArray[0].id} image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} />
-            <ECards id={EArray[1].id} image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} />
-            <ECards id={EArray[2].id} image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} />
-            <ECards id={EArray[3].id} image={EArray[3].image} description={EArray[3].description} rules={EArray[3].rules} />
-            <ECards id={EArray[4].id} image={EArray[4].image} description={EArray[4].description} rules={EArray[4].rules} />
-            <ECards id={EArray[5].id} image={EArray[5].image} description={EArray[5].description} rules={EArray[5].rules} />
-            <ECards id={EArray[6].id} image={EArray[6].image} description={EArray[6].description} rules={EArray[6].rules} />
-            <ECards id={EArray[7].id} image={EArray[7].image} description={EArray[7].description} rules={EArray[7].rules} />
+            <ECards id={EArray[0].id} image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} number={EArray[0].number} venue={EArray[0].venue} time={EArray[0].time} />
+            <ECards id={EArray[1].id} image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} number={EArray[1].number} venue={EArray[1].venue} time={EArray[1].time} />
+            <ECards id={EArray[2].id} image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} number={EArray[2].number} venue={EArray[2].venue} time={EArray[2].time} />
+            <ECards id={EArray[3].id} image={EArray[3].image} description={EArray[3].description} rules={EArray[3].rules} number={EArray[3].number} venue={EArray[3].venue} time={EArray[3].time} />
+            <ECards id={EArray[4].id} image={EArray[4].image} description={EArray[4].description} rules={EArray[4].rules} number={EArray[4].number} venue={EArray[4].venue} time={EArray[4].time} />
+            <ECards id={EArray[5].id} image={EArray[5].image} description={EArray[5].description} rules={EArray[5].rules} number={EArray[5].number} venue={EArray[5].venue} time={EArray[5].time} />
+            <ECards id={EArray[6].id} image={EArray[6].image} description={EArray[6].description} rules={EArray[6].rules} number={EArray[6].number} venue={EArray[6].venue} time={EArray[6].time} />
+            <ECards id={EArray[7].id} image={EArray[7].image} description={EArray[7].description} rules={EArray[7].rules} number={EArray[7].number} venue={EArray[7].venue} time={EArray[7].time} />
         </div>
     )
 }
