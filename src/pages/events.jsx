@@ -24,7 +24,8 @@ const EArray = [
         We will also provide cheat sheet for short codes in all major languages.<br/></>,
         "rules": <><li>Login to Code Golf using your github account</li>
         <li>Stick to the timer to solve every puzzle. Any submission after it won't be accepted.</li>
-        <li>Abide by the final decisions taken by the coordinators.</li></>
+        <li>Abide by the final decisions taken by the coordinators.</li>
+        <br/><br/></>
     },
     {
         "name": "Hack Wheel",
@@ -36,7 +37,7 @@ const EArray = [
         "rules": <><li> Maximum 4 members per team. </li>
         <li> Judges decision is final</li>
         <li>Participants should bring their own laptops.</li>
-        <li>Plagiarism should be avoided</li></>
+        <li>Plagiarism should be avoided</li><br/><br/></>
     },
     {
         "name": "Hugs & Bugs",
@@ -53,7 +54,7 @@ const EArray = [
         <li>Violating the rules or any kind of cheating leads to disqualification</li>
         <li>Please read the description</li>
         <li>Rules listed are subject to change as per the discretion of the event heads and the organizing committee</li>
-        <li>Every participant should carry an identity card/proof</li></>
+        <li>Every participant should carry an identity card/proof</li><br/><br/></>
     },
     {
         "name": "Santa Maria Hunt",
@@ -72,7 +73,7 @@ const EArray = [
         <li>Internet usage is permitted.</li>
         <li>There will be totally 7 clues. The team who decrypts and finds all the 7 clues to the treasure will win the hunt.</li>
         <li>The teams should report at the event venue at the beginning and end of the event, The decision of the event coordinators will be final.</li>
-        <li>Rules listed are subject to change as per the discretion of the Event Heads and the Organizing Committee Violating the rules, property damage or any kind of cheating leads to disqualification.</li></>
+        <li>Rules listed are subject to change as per the discretion of the Event Heads and the Organizing Committee Violating the rules, property damage or any kind of cheating leads to disqualification.</li><br/><br/></>
     },
     {
         "name": "Scroll Unveilling",
@@ -81,7 +82,7 @@ const EArray = [
         <li>The judges will be judging based on the way of explanation of their respective slides.</li>
         <li> The teams with  clear cut and quality presentations will be awarded with respective prizes.</li></>,
         "rules": <> <li> 3 members per team.</li> 
-        <li> Not more than 5 mins per presentation</li></>
+        <li> Not more than 5 mins per presentation</li><br/><br/></>
     },
     {
         "name": "Select from Brainz",
@@ -95,7 +96,7 @@ const EArray = [
         <li>The judge's decision will be final and binding</li>
         <li>For the pop quiz only the first three teams which answer correctly will be rewarded with marks or an advantage.</li>
         <li>All questions will circle around programming and computer-based concepts</li>
-        <li>Team of 2-3</li></>
+        <li>Team of 2-3</li><br/><br/></>
     },
     {
         "name": "Turn Coat",
@@ -107,7 +108,7 @@ const EArray = [
         <li> 1 minute prep time, 3 minutes to talk.</li>
         <li>Keep language polite.</li>
         <li>Rules may change at judge's discretion. </li>
-        <li>Judge's decision is final</li></>
+        <li>Judge's decision is final</li><br/><br/></>
     },
     {
         "name": "Whack-A-Bug",
@@ -119,7 +120,7 @@ const EArray = [
         <li>Results of all rounds are not subjected to discussion and the judge's decision is final.</li>
         <li>Participants are not allowed to browse the Internet.</li>
         <li>Any malpractices will not be tolerated and if found will be disqualified.</li>
-        <li>Participants must strictly abide to the timings</li></>
+        <li>Participants must strictly abide to the timings</li><br/><br/></>
     }
 ]
 
