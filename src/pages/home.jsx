@@ -81,13 +81,6 @@ const About = () => {
           technical in nature and is to be held on the 8th of October, 2022. We
           welcome all the participants to benefit from this event
         </p>
-        <a
-          href="https://forms.gle/z72CM5QPpQopoJhk8"
-          className="btn-main-md btn mx-auto align-middle space-y-10 font-poppins"
-          target="_blank"
-        >
-          Register Now
-        </a>
       </div>
     </div>
   );
