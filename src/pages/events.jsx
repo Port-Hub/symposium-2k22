@@ -144,20 +144,16 @@ const EArray = [
         "number": "1",
         "venue": "I24",
         "time": "10:30 am - 12:00 pm",
-        "description": <>A game of luck and brains; Tambola with a twist. Pick your ticket. Questions are picked at random, and displayed.
-        If you see the answer is on your ticket, mark the answer by writing the question number on top of the answer. <br />
+        "description": <>A game of luck and brains; Tambola with a twist. <br />
         There are 5 Prizes
-        <ul className="flex flex-row flex-wrap gap-x-10 gap-y-2 list-disc mx-10">
+        <ul className="flex flex-row flex-wrap justify-content-center gap-x-10 gap-y-2 list-disc mx-10">
             <li>Fast 5</li>
             <li>1st row</li>
             <li>2nd row</li>
             <li>3rd row</li>
             <li className="col-span-2">Full House</li>
         </ul>
-        Your ticket is checked for the prize you claim you qualify for.
         Depending on your luck, you might get a chance to help or sabotage your competition.
-        If the answers are marked with the correct question number and you qualify for 1 or
-        more of the prizes listed, Jackpot
         </>,
         "rules": <> <li>Participants are given tickets as pictured above and a rough sheet.</li> 
         <li>Questions are asked randomly.</li>
