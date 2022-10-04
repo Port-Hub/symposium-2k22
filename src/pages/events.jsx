@@ -179,13 +179,13 @@ const ECards = (props) => {
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 font-poppins bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40 font-bold">
                     Description
                 </h2>
-                <p className='z-40 font-poppins'>
+                <p className='z-40 font-poppins text-justify'>
                     {props.description} 
                 </p>
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 font-poppins bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40 font-bold">
                     Rules
                 </h2>
-                <div className="z-40 font-poppins">
+                <div className="z-40 font-poppins text-justify">
                     {props.rules}
                 </div>
             </div>

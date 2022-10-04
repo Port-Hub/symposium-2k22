@@ -70,11 +70,11 @@ const About = () => {
       <div className="shrink z-40 w-80 h-80">
         <img src={Favicon} />
       </div>
-      <div className="basis-2/3 space-y-10 z-40 px-10">
+      <div className="basis-2/3 space-y-10 z-40 px-0 lg:px-10 ">
         <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent font-poppins">
           About Xplore '22
         </h2>
-        <p className="font-poppins font-black">
+        <p className="font-poppins font-black text-justify">
           A National Level Technical Symposium conducted by the Department of
           Computer Science and Engineering- Loyola-ICAM College Of Engineering
           and Technology. The event is to unfold through 8 stages which are
@@ -136,7 +136,7 @@ const Home = () => {
   return (
     <>
       <About />
-      <h2 className="mx-auto max-w-3xl font-poppins border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl z-40">
+      <h2 className="mx-auto max-w-3xl font-poppins border-zinc-900 bg-gradient-to-r from-emerald-500  via-indigo-800 to-purple-600 bg-clip-text text-center text-5xl font-extrabold text-transparent sm:text-5xl z-40 pt-10">
         Events
       </h2>
       <div className="xl:grid-cold-4 grid grid-cols-2 justify-items-center gap-y-40 pt-20 md:grid-cols-4 lg:grid-cols-4 z-40">
