@@ -144,14 +144,28 @@ const EArray = [
         "number": "1",
         "venue": "I24",
         "time": "10:30 am - 12:00 pm",
-        "description": <>Challengers will be given a topic (technology, science).
-        1 minute to prepare, 3 minutes to talk about their topic.
-        They will have to switch sides (for/against) their topic at the judges signal.</>,
-        "rules": <> <li>Solo event.</li> 
-        <li>1 minute prep time, 3 minutes to talk.</li>
-        <li>Keep language polite.</li>
-        <li>Rules may change at judge's discretion.</li>
-        <li>Judge's decision is final</li></>
+        "description": <>A game of luck and brains; Tambola with a twist. Pick your ticket. Questions are picked at random, and displayed.
+        If you see the answer is on your ticket, mark the answer by writing the question number on top of the answer. <br />
+        There are 5 Prizes
+        <ul className="grid grid-cols-3 list-disc mx-10">
+            <li>Fast 5</li>
+            <li>1st row</li>
+            <li>2nd row</li>
+            <li>3rd row</li>
+            <li>Full House</li>
+        </ul>
+        Your ticket is checked for the prize you claim you qualify for.
+        Depending on your luck, you might get a chance to help or sabotage your competition.
+        If the answers are marked with the correct question number and you qualify for 1 or
+        more of the prizes listed, Jackpot
+        </>,
+        "rules": <> <li>Participants are given tickets as pictured above and a rough sheet.</li> 
+        <li>Questions are asked randomly.</li>
+        <li>If participants locate the answer on their sheet, they are to mark it with the question number.</li>
+        <li>Participants are allowed to see their neighbour’s sheets.</li>
+        <li>Every five questions, a random participant is selected for the bonus round.</li>
+        <li>If participants answer a question successfully, they can either prevent a question from being asked (thereby hindering others) or cause a question that is not on their sheet to be asked next (thereby helping others).</li>
+        </>
     }
 ]
 
