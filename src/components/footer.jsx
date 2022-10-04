@@ -1,5 +1,6 @@
 import Favicon from "../assets/icons/favicon.png"
-import { UilLinkedin, UilInstagramAlt } from "@iconscout/react-unicons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
     return(
@@ -13,10 +14,10 @@ const Footer = () => {
             </div>  */}
             <div className="gap-4 grid-flow-col">
                 <a href="https://www.instagram.com/cse_eicon/" target="_blank">
-                    <UilInstagramAlt />
+                    <FontAwesomeIcon icon={faInstagram} />
                 </a> 
                 <a href="" target="_blank">
-                    <UilLinkedin />
+                    <FontAwesomeIcon icon={faLinkedin} />
                 </a>
             </div>
         </footer>

@@ -6,9 +6,8 @@ import Scroll from "../assets/thumb/scroll-unveilling.png"
 import Brainz from "../assets/thumb/select-from-brainz.png"
 import Turn from "../assets/thumb/turn-coat.png"
 import Bugs from "../assets/thumb/whack-a-bug.png"
-import { UserGroupIcon } from "@heroicons/react/24/solid";
-import { HomeModernIcon } from "@heroicons/react/24/solid";
-import { ClockIcon } from "@heroicons/react/24/solid";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPeopleGroup, faHouse, faClock } from '@fortawesome/free-solid-svg-icons'
 
 const EArray = [
     {
@@ -163,15 +162,15 @@ const ECards = (props) => {
             <div className='z-40 space-y-5'> 
                 <img src={props.image} className="h-60 rounded-xl z-40" />
                 <div className="flex flex-row gap-x-4 items-center">
-                    <UserGroupIcon className="h-8" />
+                    <FontAwesomeIcon icon={faPeopleGroup} />
                     <p className="font-poppins">Team of {props.number}</p>
                 </div>
                 <div className="flex flex-row gap-x-4 items-center z-40">
-                    <HomeModernIcon className="h-8" />
+                    <FontAwesomeIcon icon={faHouse} />
                     <p className="font-poppins">Venue : {props.venue}</p>
                 </div>
                 <div className="flex flex-row gap-x-4 items-center z-40">
-                    <ClockIcon className="h-8" />
+                    <FontAwesomeIcon icon={faClock} />
                     <p className="font-poppins">Time : {props.time}</p>
                 </div>
             </div>
