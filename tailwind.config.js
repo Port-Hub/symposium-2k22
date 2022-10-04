@@ -4,6 +4,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         "sea-theme": "url('/src/assets/parallax/Proper/PNG/1sky.png')",
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'] 
       }
     },
   },
