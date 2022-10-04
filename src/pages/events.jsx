@@ -147,7 +147,7 @@ const EArray = [
         "description": <>A game of luck and brains; Tambola with a twist. Pick your ticket. Questions are picked at random, and displayed.
         If you see the answer is on your ticket, mark the answer by writing the question number on top of the answer. <br />
         There are 5 Prizes
-        <ul className="grid grid-cols-3 list-disc mx-10">
+        <ul className="flex flex-row flex-wrap gap-x-10 gap-y-2 list-disc mx-10">
             <li>Fast 5</li>
             <li>1st row</li>
             <li>2nd row</li>
