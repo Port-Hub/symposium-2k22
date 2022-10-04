@@ -175,11 +175,11 @@ const ECards = (props) => {
                     <p className="font-poppins">Time : {props.time}</p>
                 </div>
             </div>
-            <div className='z-40 space-y-10 m-14'>
+            <div className='z-40 space-y-10 m-5'>
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 font-poppins bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40 font-bold">
                     Description
                 </h2>
-                <p className='z-40 font-poppins text-justify'>
+                <p className='z-40 font-poppins text-justify py-0'>
                     {props.description} 
                 </p>
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 font-poppins bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40 font-bold">
