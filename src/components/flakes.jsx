@@ -4,7 +4,6 @@ import { useCallback } from "react";
 import flakeIcon from "./fish.png";
 
 const Flakes = () => {
-  
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadFull(engine);
@@ -20,73 +19,81 @@ const Flakes = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fpsLimit: 75,
+        fps_limit: 60,
         interactivity: {
           events: {
-            onClick: {
+            onclick: { enable: true, mode: "push" },
+            onhover: {
               enable: true,
-              mode: "repel",
-            },
-            onHover: {
-              enable: true,
-              mode: "bounce",
+              mode: "attract",
+              parallax: { enable: false, force: 60, smooth: 10 },
             },
             resize: true,
           },
           modes: {
-            push: {
-              quantity: 1,
-            },
-            trail: {
-              delay: 0.005,
-              quantity: 5,
-              pauseOnStop: true
-            },
+            push: { quantity: 4 },
+      attract: { distance: 200, duration: 0.4, factor: 5 }
           },
         },
         particles: {
+          color: { value: "#ffffff" },
+        line_linked: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.4,
+          width: 1
+      },
           move: {
-            direction: "right",
-            enable: true,
-            outModes: {
-              default: "out"
-            },
-            size: true,
-            speed: {
-              min: 3,
-              max: 4
-            }
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        bounce: false,
+        direction: "none",
+        enable: true,
+        out_mode: "out",
+        random: false,
+        speed: 2,
+        straight: false
           },
           number: {
-            value: 10,
+            density: { enable: true, value_area: 800 }, value: 80
           },
           opacity: {
-            value: 1,
-            animation: {
-              enable: false,
-              startValue: "max",
-              destroy: "min",
-              speed: 0.3,
-              sync: true
-            }
+            anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
+      random: false,
+      value: 0.5
           },
           shape: {
-            image: [
-              {
-                src: flakeIcon,
-                width: 20,
-                height: 20,
-              },
-            ],
-            type: 'image',
+            character: {
+              fill: false,
+              font: "Verdana",
+              style: "",
+              value: "*",
+              weight: "400"
+            },
+            image: {
+              height: 100,
+              replace_color: true,
+              src: "images/github.svg",
+              width: 100
+            },
+            polygon: { nb_sides: 5 },
+            stroke: { color: "#000000", width: 0 },
+            type: "circle"
           },
           size: {
-            value: {
-              min: 15,
-              max: 20
-            }
+            anim: { enable: false, size_min: 0.1, speed: 40, sync: false },
+            random: true,
+            value: 5
           },
         },
+        polygon: {
+          draw: { enable: false, lineColor: "#ffffff", lineWidth: 0.5 },
+          move: { radius: 10 },
+          scale: 1,
+          type: "none",
+          url: ""
+        },
+        retina_detect: true
       }}
     />
   );

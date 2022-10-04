@@ -158,18 +158,19 @@ const EArray = [
 
 const ECards = (props) => {
     return(
-        <div id={props.id} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 z-40 shadow-2xl shadow-sky-700 rounded-3xl">
-            <div className='z-40 space-y-5'>
-                <img src={props.image} className="h-60 rounded-xl" />
+        <div className="z-40">
+        <div id={props.id} className="z-40 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 bg-[#DFF6FF] shadow-2xl shadow-sky-700 rounded-3xl ">
+            <div className='z-40 space-y-5'> 
+                <img src={props.image} className="h-60 rounded-xl z-40" />
                 <div className="flex flex-row gap-x-4 items-center">
                     <UserGroupIcon className="h-8" />
                     <p>Team of {props.number}</p>
                 </div>
-                <div className="flex flex-row gap-x-4 items-center">
+                <div className="flex flex-row gap-x-4 items-center z-40">
                     <HomeModernIcon className="h-8" />
                     <p>Venue : {props.venue}</p>
                 </div>
-                <div className="flex flex-row gap-x-4 items-center">
+                <div className="flex flex-row gap-x-4 items-center z-40">
                     <ClockIcon className="h-8" />
                     <p>Time : {props.time}</p>
                 </div>
@@ -184,10 +185,11 @@ const ECards = (props) => {
                 <h2 className="bg-gradient-to-r from-emerald-700  via-indigo-800 to-purple-600 bg-clip-text text-3xl font-extrnumber={EArray[0].number} venue={EArray[0].venue} time={EArray[0o.time}ld text-transparent z-40">
                     Rules
                 </h2>
-                <div>
+                <div className="z-40">
                     {props.rules}
                 </div>
             </div>
+        </div>
         </div>
     )
 }
@@ -195,7 +197,7 @@ const ECards = (props) => {
 
 const Events = () => {
     return (
-        <div className="container mx-auto space-y-10">
+        <div className="container mx-auto space-y-10 z-40">
             <ECards id={EArray[0].id} image={EArray[0].image} description={EArray[0].description} rules={EArray[0].rules} number={EArray[0].number} venue={EArray[0].venue} time={EArray[0].time} />
             <ECards id={EArray[1].id} image={EArray[1].image} description={EArray[1].description} rules={EArray[1].rules} number={EArray[1].number} venue={EArray[1].venue} time={EArray[1].time} />
             <ECards id={EArray[2].id} image={EArray[2].image} description={EArray[2].description} rules={EArray[2].rules} number={EArray[2].number} venue={EArray[2].venue} time={EArray[2].time} />
