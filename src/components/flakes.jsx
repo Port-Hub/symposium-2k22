@@ -25,7 +25,7 @@ const Flakes = () => {
             onclick: { enable: true, mode: "push" },
             onhover: {
               enable: true,
-              mode: "attract",
+              mode: "bounce",
               parallax: { enable: false, force: 60, smooth: 10 },
             },
             resize: true,
