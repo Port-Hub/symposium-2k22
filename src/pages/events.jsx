@@ -155,7 +155,7 @@ const EArray = [
         </ul>
         Depending on your luck, you might get a chance to help or sabotage your competition.
         </>,
-        "rules": <> <li>Participants are given tickets as pictured above and a rough sheet.</li> 
+        "rules": <> <li>Participants are given tickets and a rough sheet.</li> 
         <li>Questions are asked randomly.</li>
         <li>If participants locate the answer on their sheet, they are to mark it with the question number.</li>
         <li>Participants are allowed to see their neighbour’s sheets.</li>
