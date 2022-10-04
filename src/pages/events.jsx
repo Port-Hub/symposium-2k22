@@ -152,7 +152,7 @@ const EArray = [
             <li>1st row</li>
             <li>2nd row</li>
             <li>3rd row</li>
-            <li>Full House</li>
+            <li className="col-span-2">Full House</li>
         </ul>
         Your ticket is checked for the prize you claim you qualify for.
         Depending on your luck, you might get a chance to help or sabotage your competition.
