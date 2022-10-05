@@ -4,6 +4,7 @@ import Landing from "./pages/landing";
 import Layout from "./components/layout";
 import Home from "./pages/home";
 import Events from "./pages/events";
+import Oops from "./pages/404";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route element={<Layout> <Outlet /> </Layout>} >
           <Route exact path="/events" element={<Events />} />
           <Route exact path="/home" element={<Home />} />
+          <Route path="*" element={<Oops />} />
         </Route>
       </Routes>
     </Router>
