@@ -208,7 +208,7 @@ const Image404 = (props) => (
 const Oops = () => {
     return(
         <div className="h-screen flex flex-col flex-wrap gap-y-10 items-center content-center">
-            <Image404 />
+            <Image404 className="w-96" />
             <p className=" text-2xl text-accent-content">Aww mate, It looks like you are lost :(</p>
             <Link to="/home" className="btn glass text-primary">Head Back Home :)</Link>
             <Link to="/events" className="btn glass text-primary">Explore Events :)</Link>
