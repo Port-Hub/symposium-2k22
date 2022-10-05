@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useTime, useTransform } from "framer-motion";
 
-const Image404 = (props) => (
+const Oops = () => {
+
+  const time = useTime();
+  const rotate = useTransform(time, [0, 5000], [0, 360], { clamp: false });
+
+  const Image404 = (props) => (
     <svg
       x="0px"
       y="0px"
@@ -32,10 +37,7 @@ const Image404 = (props) => (
           d="M738.6,201.1h-33v-54.4c0-0.6-0.4-1-1-1h-36.8c-0.6,0-1,0.4-1,1v54.4H600L675,61.4c0.2-0.3,0.2-0.7,0-1 s-0.5-0.5-0.9-0.5h-37.9c-0.4,0-0.7,0.2-0.9,0.5l-79.8,146.9c-0.1,0.1-0.1,0.3-0.1,0.5v29.3c0,0.6,0.4,1,1,1h110.4v56.3 c0,0.6,0.4,1,1,1h36.8c0.6,0,1-0.4,1-1v-56.3h33c0.6,0,1-0.4,1-1v-35C739.6,201.5,739.1,201.1,738.6,201.1z M737.6,236.1h-33 c-0.6,0-1,0.4-1,1v56.3h-34.8v-56.3c0-0.6-0.4-1-1-1H557.3V208l79.4-146.2h35.7l-74.9,139.7c-0.2,0.3-0.2,0.7,0,1s0.5,0.5,0.9,0.5 h69.4c0.6,0,1-0.4,1-1v-54.4h34.8v54.4c0,0.6,0.4,1,1,1h33V236.1z"
         />
       </g>
-      <motion.g
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, repeatDelay: 0.5 }}
-      >
+      <motion.g style={{ rotate }}>
         <g>
           <path
             fill="#1A6571"
@@ -205,14 +207,13 @@ const Image404 = (props) => (
     </svg>
   );
 
-const Oops = () => {
-    return(
-        <div className="h-screen flex flex-col flex-nowrap gap-y-10 items-center content-center">
-            <Image404 className="w-96" />
-            <p className=" text-2xl text-accent-content">Aww mate, It looks like you are lost :(</p>
-            <Link to="/home" className="btn glass text-primary">Head Back Home :)</Link>
-            <Link to="/events" className="btn glass text-primary">Explore Events :)</Link>
-        </div>
+  return(
+      <div className="h-screen flex flex-col flex-nowrap gap-y-10 items-center content-center">
+          <Image404 className="w-96" />
+          <p className=" text-2xl text-accent-content">Aww mate, It looks like you are lost :(</p>
+          <Link to="/home" className="btn glass text-primary">Head Back Home :)</Link>
+          <Link to="/events" className="btn glass text-primary">Explore Events :)</Link>
+      </div>
     )
 }
 
