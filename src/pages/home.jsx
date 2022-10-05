@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 import Favicon from "../assets/icons/favicon.png";
 import Golf from "../assets/events/code-golfing.png";
@@ -91,7 +92,16 @@ const Deck = () => {
     <>
       {cards.map((item, index) => (
         <div className="bg-auto z-40" key={index}>
-          <div
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            drag
+            dragConstraints={{
+              top: -2,
+              left: -2,
+              right: 2,
+              bottom: 2,
+            }}
             style={{
               backgroundImage: `url(${item.image})`,
             }}
