@@ -15,7 +15,7 @@ const Landing = () => {
   const parallax = useRef();
   return (
     <div className="h-screen w-screen">
-      <Parallax ref={parallax} pages={6} config={config.stiff} style={{backgroundColor:"#C2DFFF"}}>
+      <Parallax className="bg-sea-theme bg-cover" ref={parallax} pages={6} config={config.stiff} >
 
 
       <ParallaxLayer

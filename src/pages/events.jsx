@@ -168,7 +168,7 @@ const EArray = [
 const ECards = (props) => {
     return(
         <div className="z-40">
-        <div id={props.id} className="z-40 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 bg-[#DFF6FF] shadow-2xl shadow-sky-700 rounded-3xl mx-auto p-8">
+        <div id={props.id} className="z-40 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center gap-y-20 bg-base-300 shadow-2xl shadow-blue-500 rounded-3xl mx-auto p-8">
             <div className='z-40 space-y-5'> 
                 <img src={props.image} className="h-60 rounded-xl z-40" />
                 <div className="flex flex-row gap-x-4 items-center">
