@@ -22,8 +22,3 @@ yarn dev
 yarn build
 # or `npm run build`
 ```
-
----
-<p align="center">
-<img src="./powered-by-vitawind-bright.png">
-</p>
