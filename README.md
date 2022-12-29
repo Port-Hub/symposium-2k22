@@ -1,7 +1,7 @@
 # symposium-2k22
 
-- **template of:** vite + react
-- **tailwindcss:** v3.x
+- **Template of:** Vite + React
+- **TailwindCSS:** v3.x
 
 ## Started
 ```bash
