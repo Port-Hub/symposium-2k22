@@ -1,5 +1,7 @@
 # symposium-2k22
 
+Link : xplore2k22.netlify.app
+
 - **Template of:** Vite + React
 - **TailwindCSS:** v3.x
 
